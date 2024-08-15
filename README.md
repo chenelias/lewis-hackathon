@@ -1,38 +1,21 @@
-# create-svelte
+# Music Finder
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+Made for Hackathon with Lewis 2024
 
-## Creating a project
+## ❓️What does it do?
 
-If you're seeing this, you've probably already done this step. Congrats!
+When you search over a random number characters, the result box will fall to the bottom of the page, you have to drag it back to reconnect the wire under the search bar.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## 🚀️ Built with
 
-# create a new project in my-app
-npm create svelte@latest my-app
+- matter.js (physics engine)
+- Sveltekit (web framework)
+- TailwindCSS (CSS framework)
+- Youtube API (for the music data) **(If you run it locally, you need to use your own API key)**
+
+## 📦️ Installation
+
 ```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+pnpm install
+pnpm run dev
 ```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.

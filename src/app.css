@@ -7,16 +7,17 @@
 	font-family: 'Nunito', system-ui;
 	font-optical-sizing: auto;
 	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 body {
 	overflow: hidden;
 }
-
 canvas {
 	background: transparent !important;
 	position: absolute;
 	bottom: 0;
 	z-index: 1;
 	border: none;
-	opacity: 0;
+	opacity: 0 !important;
 }
