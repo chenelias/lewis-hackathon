@@ -218,7 +218,7 @@
 						<li
 							class="text-center text-lg font-bold absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 text-red-600"
 						>
-							Search Bar is disconnected, try to reconnect it again!
+							Search bar is disconnected!
 						</li>
 					{/if}
 				</ul>
