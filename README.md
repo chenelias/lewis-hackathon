@@ -13,6 +13,13 @@ When you search over a random number characters, the result box will fall to the
 - TailwindCSS (CSS framework)
 - Youtube API (for the music data) **(If you run it locally, you need to use your own API key)**
 
+## 🎥 📸 Demo
+
+![Demo Video](./static/demo_video.webm)
+![screenshot1](./static/screenshot1.png)
+![screenshot2](./static/screenshot2.png)
+![screenshot3](./static/screenshot3.png)
+
 ## 📦️ Installation
 
 ```

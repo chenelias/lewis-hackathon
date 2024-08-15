@@ -119,13 +119,6 @@
 		loading = false;
 	});
 
-	function unmuteVideo() {
-		const iframe = document.getElementById('player');
-		if (iframe) {
-			iframe.contentWindow.postMessage('{"event":"command","func":"unMute","args":""}', '*');
-		}
-	}
-
 	$: searchQuery, search();
 	$: searchQuery, overText();
 	function overText() {
@@ -258,7 +251,7 @@
 		target="_blank">GitHub Repositories</a
 	>
 </footer>
-{#if player}
+{#if player && currentVideoId}
 	<div
 		class="bg-white fixed h-[100%] w-[100%] z-[1000]"
 		transition:fly={{ y: -200, duration: 800 }}
@@ -266,13 +259,16 @@
 		<div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[10000] drop-shadow-2xl">
 			<div class="w-[640px] h-[640px] rounded-2xl bg-gray-300">
 				<iframe
-					title="YouTube video player"
 					id="player"
 					type="text/html"
 					width="640"
 					height="640"
 					class="rounded-2xl"
-					src="http://www.youtube.com/embed/{currentVideoId}?enablejsapi=1&origin=http://example.com&autoplay=1"
+					src="https://www.youtube.com/embed/{currentVideoId}"
+					title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					referrerpolicy="strict-origin-when-cross-origin"
 				></iframe>
 			</div>
 			<button
