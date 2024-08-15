@@ -110,9 +110,11 @@
 
 	onMount(async () => {
 		loading = true;
-		const response = await fetch(
-			`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLyOL_RMmwqydli4pCUvprHaskPvGKRTC9&key=${tokenkey}&maxResults=1000`
-		);
+		// const response = await fetch(
+		// 	`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLyOL_RMmwqydli4pCUvprHaskPvGKRTC9&key=${tokenkey}&maxResults=1000`
+		// );
+
+		const response = await fetch(`/api.json`);
 		const data = await response.json();
 		musicData = data.items;
 		originalMusicData = data.items;

@@ -11,7 +11,7 @@ When you search over a random number characters, the result box will fall to the
 - matter.js (physics engine)
 - Sveltekit (web framework)
 - TailwindCSS (CSS framework)
-- Youtube API (for the music data) **(If you run it locally, you need to use your own API key)**
+- Youtube API (for the music data) **(data has been replace with the api response json file)**
 
 ## 🎥 📸 Demo
 
