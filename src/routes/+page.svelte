@@ -3,7 +3,7 @@
 	import { fly } from 'svelte/transition';
 	import Matter from 'matter-js';
 
-	const tokenkey = import.meta.env.VITE_MUSIC_API;
+	// const tokenkey = import.meta.env.VITE_MUSIC_API;
 	let musicData = [];
 	let originalMusicData = [];
 	let loading = true;
@@ -259,14 +259,16 @@
 		transition:fly={{ y: -200, duration: 800 }}
 	>
 		<div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[10000] drop-shadow-2xl">
-			<div class="w-[640px] h-[640px] rounded-2xl bg-gray-300">
+			<div
+				class="rounded-2xl bg-gray-300"
+				style={`width: ${innerWidth * 0.9}px; height: ${innerWidth * 0.9}px;max-width:600px;max-height:600px;`}
+			>
 				<iframe
 					id="player"
 					type="text/html"
-					width="640"
-					height="640"
 					class="rounded-2xl"
 					src="https://www.youtube.com/embed/{currentVideoId}"
+					style={`width: ${innerWidth * 0.9}px; height: ${innerWidth * 0.9}px;max-width:600px;max-height:600px;`}
 					title="YouTube video player"
 					frameborder="0"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
