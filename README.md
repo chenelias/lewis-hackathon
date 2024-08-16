@@ -3,9 +3,9 @@
 
 ## ❓️What does it do?
 
-When you search over a random number characters, the result box will fall to the bottom of the page, you have to drag it back to reconnect the wire under the search bar.
+When you searching over a random number of characters, the result box will fall down to the bottom of the page, so you have to drag it back to reconnect the wire under the search bar.
 
-Click the result to play music.
+You can click the result to play music.
 
 ## 🚀️ Built with
 
