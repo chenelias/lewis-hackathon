@@ -122,9 +122,8 @@
 	});
 
 	$: searchQuery, search();
-	$: searchQuery, overText();
 	function overText() {
-		let random = Math.floor(Math.random() * 3) + 1;
+		let random = Math.floor(Math.random() * 2) + 1;
 		if (searchQuery.length - oldSearchQueryLength > random) {
 			pin = false;
 			pinTimeout = false;
@@ -132,16 +131,19 @@
 			searchInput.blur();
 			oldSearchQueryLength = searchQuery.length;
 		}
+		if (searchQuery.length === 0) {
+			oldSearchQueryLength = 0;
+		}
 	}
 	function search() {
 		musicData = originalMusicData;
-		oldSearchQueryLength = 0;
 		musicData = musicData.filter((item) => {
 			return (
 				item.snippet.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
 				item.snippet.videoOwnerChannelTitle.toLowerCase().includes(searchQuery.toLowerCase())
 			);
 		});
+		overText();
 	}
 </script>
 
