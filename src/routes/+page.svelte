@@ -134,16 +134,14 @@
 		}
 	}
 	function search() {
-		if (searchQuery === '') {
-			musicData = originalMusicData;
-		} else {
-			musicData = musicData.filter((item) => {
-				return (
-					item.snippet.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-					item.snippet.videoOwnerChannelTitle.toLowerCase().includes(searchQuery.toLowerCase())
-				);
-			});
-		}
+		musicData = originalMusicData;
+		oldSearchQueryLength = 0;
+		musicData = musicData.filter((item) => {
+			return (
+				item.snippet.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+				item.snippet.videoOwnerChannelTitle.toLowerCase().includes(searchQuery.toLowerCase())
+			);
+		});
 	}
 </script>
 
